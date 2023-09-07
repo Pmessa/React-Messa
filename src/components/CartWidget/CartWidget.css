@@ -1,0 +1,18 @@
+.cart-widget {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+ 
+.cantCarrito{
+    text-align: center;
+    font-size:15px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 100%;
+    width: 20px;
+    height: 70%;
+    color:rgb(252, 233, 233);
+    font-weight:  bold;
+}
