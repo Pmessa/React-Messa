@@ -9,7 +9,7 @@ const ItemsDetails = () => {
 const {itemId} = useParams();
 console.log(itemId)
 
-const detalleId = ProductsData.filter((item)=>  item.id === itemId );
+const detalleId = ProductsData.filter((item)=>  item.id === parseInt(itemId));
   return (
 
     <ItemDetailContainer ItemDetailContainer = {detalleId}/>

@@ -28,7 +28,7 @@ const ItemListContainer = ({ ProductsData }) =>{
                           </Card.Text>
                           <div className='buttonContainer'>
                             {/* <Link to ={'/items/${item.id}'}>Detalles</Link> */}
-                            <Button variant="dark"  onClick={()=> Navigate('/item/{item.id}')} className='buttonVerDetalle'>Ver Detalle</Button>
+                            <Button variant="dark"  onClick={()=> Navigate(`/item/${item.id}`)} className='buttonVerDetalle'>Ver Detalle</Button>
                           </div>
                           
                         </Card.Body>

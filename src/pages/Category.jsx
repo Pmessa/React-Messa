@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
-import { ProductsData } from '../json/ProductsData';
+import { ProductsData } from '../json/ProductsData'
+
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 const Category = () => {

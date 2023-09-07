@@ -10,18 +10,18 @@ const ItemDetailContainer = ({ProductData}) => {
 
     <div className='DetailsContainer'>
 
-
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+      
+  
+    <Card style={{ width: '18rem' }}key="una key">
+      <Card.Img variant="top" src="img/Batido.jpg" />
       <Card.Body>
-        <Card.Title>titulo de la card</Card.Title>
+        <Card.Title>Este es el Título</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Descripcion del producto a la que te criaste
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+        <ListGroup.Item>categoria</ListGroup.Item>
         <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
         <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
       </ListGroup>
@@ -31,7 +31,6 @@ const ItemDetailContainer = ({ProductData}) => {
       </Card.Body>
     </Card>
 
-);
 </div>
 )
 }
