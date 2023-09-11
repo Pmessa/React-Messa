@@ -9,9 +9,9 @@ const Category = () => {
   const { categoryId } = useParams();
   console.log(categoryId)
 
-  const filter = ProductsData.filter((item)=> item.categoria === categoryId);
+  const filtrados = ProductsData.filter((item)=> item.categoria === categoryId);
   return (
-       <ItemListContainer  ProductsData={filter}/>
+       <ItemListContainer  ProductsData={filtrados}/>
       );
   };
 
