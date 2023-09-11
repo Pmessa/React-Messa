@@ -1,3 +1,27 @@
 .imgLogo{
     height: 50px;
 }
+.nav-link a{
+    text-decoration: none;
+    color:rgba(0,0,0,.65);
+}
+.nav-link a:hover{
+    color:black;
+}
+
+#cosnat{
+
+    color:rgba(0,0,0,.65);
+}
+
+#cosnat:hover{
+    color:black;
+}
+.drop{
+    text-decoration: none;
+    color:rgba(0,0,0,.65);
+}
+
+.drop:hover{
+    color:black;
+}

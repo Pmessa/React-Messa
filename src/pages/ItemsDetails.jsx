@@ -1,18 +1,19 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
 import { ProductsData } from '../json/ProductsData';
 
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
 
 const ItemsDetails = () => {
 
 const {itemId} = useParams();
-console.log(itemId)
 
-const detalleId = ProductsData.filter((item) =>  item.id === (itemId));
-  return (
+const detalleId = ProductsData.filter((item)=>  item.id === (itemId));
+ 
+return (
 
-    <ItemDetailContainer ItemDetailContainer = {detalleId}/>
+    <ItemDetailContainer DetalleProducto={detalleId}/>
+
   );
 };
 

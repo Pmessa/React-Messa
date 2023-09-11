@@ -25,14 +25,14 @@ const NavBar = () =>{
             style={{ maxHeight: '100px' }}
             navbarScroll
             >
-            <Nav.Link><Link to="/">Alimentos Saludables</Link></Nav.Link>
-            <Nav.Link href="#action2">Cosméticos Naturales</Nav.Link>
+            <Nav.Link><Link  to="/">Alimentos Saludables</Link></Nav.Link>
+            <Nav.Link href="#action2" id='cosnat'>Cosméticos Naturales</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item>
-              <Link to={"/category/CGluten"}>Con Gluten</Link>
+              <Link to={"/category/CGluten"} className='drop'>Con Gluten</Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to={"/category/STACC"}>Sin TACC</Link>
+                <Link to={"/category/STACC"} className='drop'>Sin TACC</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider/>
               <NavDropdown.Item href="#action5">
@@ -47,7 +47,7 @@ const NavBar = () =>{
               className="me-2"
               aria-label="Search"
               />
-            <Button variant="outline-success">Buscar</Button>
+            <Button variant="outline-dark">Buscar</Button>
           </Form>
         </Navbar.Collapse>
           <CartWidget/>

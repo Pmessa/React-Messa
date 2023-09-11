@@ -12,7 +12,7 @@ const ItemListContainer = ({ ProductsData }) =>{
                 <div className='productsContainer'>
                 
                 {ProductsData.map((item)=>{
-                  console.log(item.id)
+  
                     return(
                         <Card className='cardContainer' style={{ width: '18rem' }} key={item.id}>
                         <Card.Img variant="top" className='imgContainer' src={item.img} alt="Imágen del producto"/>
