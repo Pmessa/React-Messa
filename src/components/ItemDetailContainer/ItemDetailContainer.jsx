@@ -3,21 +3,17 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 
+
 const ItemDetailContainer = ({ DetalleProducto }) => {
 
   return (
-
-    <div className="detalleProductoContainer">
-
-      {DetalleProducto.map((item) => {
-
-        return (
-          <Card style={{ width: '18rem' }} key={item.id}>
-            <Card.Img variant="top" src={item.img} />
+   
+          <Card style={{ width: '18rem' }} key={DetalleProducto.id}>
+            <Card.Img variant="top" src={DetalleProducto.img} />
             <Card.Body>
-              <Card.Title>{item.titulo}</Card.Title>
+              <Card.Title>{DetalleProducto.titulo}</Card.Title>
               <Card.Text>
-                Descripcion del producto a la que te criaste
+              {DetalleProducto.descripcion}
               </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
@@ -30,14 +26,6 @@ const ItemDetailContainer = ({ DetalleProducto }) => {
               <Card.Link href="#">Another Link</Card.Link>
             </Card.Body>
           </Card>
-        )
-
-
-      })}
-    </div>
-
-
-
   )
 }
 
