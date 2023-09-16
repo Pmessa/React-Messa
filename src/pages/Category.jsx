@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
 import { ProductsData } from '../json/ProductsData'
-
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 const Category = () => {
@@ -9,7 +8,7 @@ const Category = () => {
   const { categoryId } = useParams();
   console.log(categoryId)
 
-  const filtrados = ProductsData.filter((item)=> item.categoria === categoryId);
+  const filtrados = ProductsData.filter((item)=> item.category === categoryId);
   return (
        <ItemListContainer  ProductsData={filtrados}/>
       );

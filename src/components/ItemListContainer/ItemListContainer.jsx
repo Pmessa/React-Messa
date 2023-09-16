@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import "./ItemListContainer.css"
-import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-type
 const ItemListContainer = ({ ProductsData }) =>{
@@ -17,13 +16,13 @@ const ItemListContainer = ({ ProductsData }) =>{
                         <Card className='cardContainer' style={{ width: '18rem' }} key={item.id}>
                         <Card.Img variant="top" className='imgContainer' src={item.img} alt="Imágen del producto"/>
                         <Card.Body>
-                          <Card.Title>{item.titulo}</Card.Title>
+                          <Card.Title>{item.title}</Card.Title>
                           <Card.Text className='descriptionContainer'>
-                            {item.descripcion}
+                            {item.description}
                           </Card.Text>
                           <Card.Text className='cardPrecioContainer'>
                             <div className='precioContainer'>
-                            <span>$</span>{item.precio}
+                            <span>$</span>{item.price}
                             </div>                            
                           </Card.Text>
                           <div className='buttonContainer'>
