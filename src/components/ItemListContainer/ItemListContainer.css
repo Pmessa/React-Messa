@@ -67,7 +67,8 @@
     width: 100%;
 }
 img{
-    object-fit: scale-down;
+    object-fit: cover;
+    height:200px;
 }
 .cardContainer{
     margin: 8px;

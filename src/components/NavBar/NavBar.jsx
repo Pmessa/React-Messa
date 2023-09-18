@@ -26,7 +26,7 @@ const NavBar = () =>{
             navbarScroll
             >
             <Nav.Link><Link  to="/">Alimentos Saludables</Link></Nav.Link>
-            <Nav.Link href="#action2" id='cosnat'>Cosméticos Naturales</Nav.Link>
+            <Nav.Link><Link to={"/create/products"}  id='cosnat'>Crear Producto</Link></Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item>
               <Link to={"/category/CGluten"} className='drop'>Con Gluten</Link>

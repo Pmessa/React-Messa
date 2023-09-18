@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Category from "../pages/Category"; 
 import ItemsDetails from "../pages/ItemsDetails";
 import NavBar from "../components/NavBar/NavBar";
+import CreateProducts from "../pages/CreateProducts";
 
 
 
@@ -15,6 +16,7 @@ const MainRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryId" element={<Category />} />
         <Route path="/Item/:itemId" element={<ItemsDetails />} />
+        <Route path="/create/products" element={<CreateProducts />} />
       </Routes>
     </Router>
   );

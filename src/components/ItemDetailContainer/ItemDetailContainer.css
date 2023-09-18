@@ -24,7 +24,7 @@ h1{
 }
 .TextTitle{
     width: 50%;
-    border: 2px solid gray;
+    border: 2px solid rgb(234, 233, 233);
     margin-right: 30px;
 
 }
@@ -32,6 +32,7 @@ h1{
 .ImgContainer img{
 height:450px;
 object-fit: scale-down;
+border-radius: 15px;
 }
 
 @media  screen and (max-width:1400px) {
