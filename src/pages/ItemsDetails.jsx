@@ -5,35 +5,40 @@ import { useParams } from 'react-router-dom'
 // import { ProductsData } from '../json/ProductsData';
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
 
-import { collection, getDocs, getFirestore } from "Firebase/firestore"
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemsDetails = () => {
 
-  const [products, setProducts]= useState([]);
+  const [products, setProducts] = useState([]);
 
-  useEffect(()=>{
+  const { itemId } = useParams();
+
+  useEffect(() => {
     //Inicializar la base de datos
     const db = getFirestore();
 
-    //inicializamos la coleccion
-    const productsCollection = collection(db, "products");
+    //Inicializamos la coleccion
+    const item = doc(db, "products", itemId);
 
-    //Obtener los datos de la coleccion
-    getDocs(productsCollection).then((snapshot) =>{
-      setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-    })
+    //Obtener los datos del documento
+    getDoc(item)
+      .then((snapshot) => {
+        setProducts({ id: snapshot.id, ...snapshot.data() });
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+     
 
-  }, [])
-
-const { itemId } = useParams();
+  }, [itemId])
 
 
-const detalleId = products.find((item)=>  item.id == (itemId));
-console.log( detalleId )
-return (
+  // const detalleId = products.find((item)=>  item.id === (itemId));
+  // console.log( detalleId )
+  return (
 
-    <ItemDetailContainer DetalleProducto={detalleId}/>
- 
+    <ItemDetailContainer DetalleProducto={products} />
+
   );
 };
 

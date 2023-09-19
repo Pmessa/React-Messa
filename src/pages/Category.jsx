@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 // import { ProductsData } from '../json/ProductsData'
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
-import { collection, getDocs, getFirestore } from "Firebase/firestore"
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 
 const Category = () => {
 

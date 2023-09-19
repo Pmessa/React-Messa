@@ -6,6 +6,7 @@ const ItemDetailContainer = ({DetalleProducto}) => {
 
   return (
     <div className='DetailContainer' key={DetalleProducto.id}>
+
       <h1>{DetalleProducto.title}</h1>
     
     <div className='CardContainer'>
