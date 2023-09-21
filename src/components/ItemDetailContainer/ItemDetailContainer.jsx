@@ -15,6 +15,7 @@ const ItemDetailContainer = ({DetalleProducto}) => {
       </div>
       <div className='TextTitle'>
       <h3>{DetalleProducto.description}</h3>
+      <p>{DetalleProducto.detail}</p>
       
       <div className='PriceContainer'></div>
       <p><span>$</span> {DetalleProducto.price}</p>
