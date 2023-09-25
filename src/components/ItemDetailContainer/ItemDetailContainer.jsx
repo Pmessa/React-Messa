@@ -1,5 +1,6 @@
 import React from 'react';
 import './ItemDetailContainer.css'
+import ItemCount from '../ItemCount/ItemCount';
 
 
 const ItemDetailContainer = ({DetalleProducto}) => {
@@ -21,6 +22,8 @@ const ItemDetailContainer = ({DetalleProducto}) => {
       <p><span>$</span> {DetalleProducto.price}</p>
       </div>
       </div>
+      <ItemCount />
+      <button>Agregar al Carrito</button>
     </div>
     )
   }

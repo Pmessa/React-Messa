@@ -10,6 +10,8 @@ import CreateProducts from "../pages/CreateProducts";
 
 const MainRouter = () => {
   return (
+
+   
     <Router>
       <NavBar />
       <Routes>
@@ -19,6 +21,7 @@ const MainRouter = () => {
         <Route path="/create/products" element={<CreateProducts />} />
       </Routes>
     </Router>
+
   );
 };
 

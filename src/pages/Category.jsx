@@ -26,7 +26,7 @@ const Category = () => {
   }, [])
 
   const { categoryId } = useParams();
-  console.log(categoryId)
+
 
   const filtrados = products.filter((item)=> item.category === categoryId);
   return (
