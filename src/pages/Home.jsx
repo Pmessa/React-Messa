@@ -1,32 +1,26 @@
-import React, { useEffect } from 'react'
-import { collection, getDocs, getFirestore } from "firebase/firestore"
+import { useCollection } from "../hooks/useCollection"
 
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import { useState } from 'react';
+import ItemListcontainer from "../components/ItemListContainer/ItemListContainer"
 
 
-const Home = () => {
 
-  const [products, setProducts]= useState([]);
+const Home =() => {
 
-  useEffect(()=>{
-    //Inicializar la base de datos
-    const db = getFirestore();
+  const { data, loading } = useCollection("products")
 
-    //inicializamos la coleccion
-    const productsCollection = collection(db, "products");
+  return loading ? <h1>Cargando...</h1> : <ItemListcontainer ProductsData = {data}/>
+}
 
-    //Obtener los datos de la coleccion
-    getDocs(productsCollection).then((snapshot) =>{
-      setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-    })
-
-  }, [])
-
-  return (
-    <ItemListContainer ProductsData={products} /> 
-  );
-};
+export default Home
 
 
-export default Home;
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import "./ItemListContainer.css"
 
-// eslint-disable-next-line react/prop-type
 const ItemListContainer = ({ ProductsData }) =>{
    
   const Navigate = useNavigate()

@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
 
 import "./ItemCount.css"
+
+import { Button } from "react-bootstrap"
 import { CartContext } from '../../context/CartContext'
 
 const ItemCount = () => {
@@ -25,9 +27,9 @@ const handleRemoveProduct = ()  =>{
 
   return (
     <div>
-      <button  onClick={handleRemoveProduct}>-</button>
+      <Button  className="btn-info" onClick={handleRemoveProduct}>-</Button >
       <label>{count}</label>
-      <button onClick={handleAddProduct}>+</button>
+      <Button className="btn-info" onClick={handleAddProduct}>+</Button >
     </div>
   )
 }

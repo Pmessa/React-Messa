@@ -17,7 +17,7 @@ const NavBar = () =>{
   return (
     <Navbar expand="lg" className="bg-body">
       <Container fluid className='container'>
-        <Navbar.Brand><Link to="/"><img src="src/assets/img/logo-tr.png" alt="logo de la marca" className='imgLogo'/></Link></Navbar.Brand>
+        <Navbar.Brand><Link to="/"><img src="/logo-tr.png" alt="logo de la marca" className='imgLogo'/></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

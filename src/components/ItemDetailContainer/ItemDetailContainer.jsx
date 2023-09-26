@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ItemDetailContainer.css'
 import ItemCount from '../ItemCount/ItemCount';
+
+import { Button } from "react-bootstrap"
+
 
 
 const ItemDetailContainer = ({DetalleProducto}) => {
 
+  const [stock, setStock] = React.useState(10)
+  console.log(stock)
+
+ 
   return (
     <div className='DetailContainer' key={DetalleProducto.id}>
 
@@ -23,7 +30,9 @@ const ItemDetailContainer = ({DetalleProducto}) => {
       </div>
       </div>
       <ItemCount />
-      <button>Agregar al Carrito</button>
+      { stock > 5 ? <strong>Producto Disponible</strong> : <strong>Ultimas unidades!</strong>}
+      <Button className="btn-info" onClick={()=> setStock(stock - 1)}>Agregar al Carrito</Button>
+
     </div>
     )
   }
