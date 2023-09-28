@@ -15,8 +15,8 @@ h1{
     width: 100vw;
     display: flex;  
     align-items: center;
+    justify-content: center;
     text-align: center;
-    justify-content: space-around;
     flex-direction: row;
 }
 .ImgContainer{
@@ -30,7 +30,7 @@ h1{
 }
 
 .ImgContainer img{
-height:450px;
+
 object-fit: scale-down;
 border-radius: 15px;
 }
@@ -45,4 +45,7 @@ border-radius: 15px;
         text-align: center;
         flex-direction: column;
     }
+}
+p{
+    display: inline;
 }

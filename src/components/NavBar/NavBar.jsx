@@ -31,12 +31,11 @@ const NavBar = () =>{
               <Link to={"/category/CGluten"} className='drop'>Con Gluten</Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
+              <NavDropdown.Divider/>
                 <Link to={"/category/STACC"} className='drop'>Sin TACC</Link>
               </NavDropdown.Item>
-              <NavDropdown.Divider/>
-              <NavDropdown.Item href="#action5">
-                eBooks de recetas
-              </NavDropdown.Item>
+
+
             </NavDropdown>
           </Nav>
 

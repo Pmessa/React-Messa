@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Button } from "react-bootstrap"
+
 import './ItemDetailContainer.css'
 import ItemCount from '../ItemCount/ItemCount';
 
-import { Button } from "react-bootstrap"
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
 
@@ -21,17 +23,16 @@ const ItemDetailContainer = ({DetalleProducto}) => {
       <div className='ImgContainer'>
       <img src={DetalleProducto.img} alt="Imagen del producto" />
       </div>
-      <div className='TextTitle'>
-      <h3>{DetalleProducto.description}</h3>
-      <p>{DetalleProducto.detail}</p>
-      
-      <div className='PriceContainer'></div>
-      <p><span>$</span> {DetalleProducto.price}</p>
-      </div>
+      <ListGroup>
+      <ListGroup.Item><h2>{DetalleProducto.description}</h2></ListGroup.Item>
+      <ListGroup.Item>{DetalleProducto.detail}</ListGroup.Item>
+      <ListGroup.Item><p className='$'><span>$</span></p>{DetalleProducto.price}</ListGroup.Item>
+      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+    </ListGroup>
       </div>
       <ItemCount />
       { stock > 5 ? <strong>Producto Disponible</strong> : <strong>Ultimas unidades!</strong>}
-      <Button className="btn-info" onClick={()=> setStock(stock - 1)}>Agregar al Carrito</Button>
+      <Button className="btn-success" onClick={()=> setStock(stock - 1)}>Agregar al Carrito</Button>
 
     </div>
     )

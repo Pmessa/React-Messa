@@ -1,16 +1,13 @@
 import React, { useContext, useState } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 import "./ItemCount.css"
 
 import { Button } from "react-bootstrap"
-import { CartContext } from '../../context/CartContext'
 
 const ItemCount = () => {
-
-
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const {cartItems, setCartItems} = useContext (CartContext);
-
 
 const handleAddProduct = ()  =>{
 
@@ -20,18 +17,23 @@ const handleAddProduct = ()  =>{
 }
 const handleRemoveProduct = ()  =>{
 
-  setCartItems( cartItems - 1)
-  setCount(count - 1 )
-}
+  if (cartItems > 0 ){
+    setCartItems(cartItems - 1)
+    setCount(count - 1 )
+
+  }
+
+
+};
 
 
   return (
     <div>
-      <Button  className="btn-info" onClick={handleRemoveProduct}>-</Button >
+      <Button  className="btn-success" onClick={handleRemoveProduct}>-</Button >
       <label>{count}</label>
-      <Button className="btn-info" onClick={handleAddProduct}>+</Button >
+      <Button className="btn-success" onClick={handleAddProduct}>+</Button >
     </div>
   )
-}
+};
 
 export default ItemCount
