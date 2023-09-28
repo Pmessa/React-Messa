@@ -26,7 +26,6 @@ const NavBar = () =>{
             navbarScroll
             >
             <Nav.Link><Link  to="/">Alimentos Saludables</Link></Nav.Link>
-            <Nav.Link><Link to={"/create/products"}  id='cosnat'>Crear Producto</Link></Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item>
               <Link to={"/category/CGluten"} className='drop'>Con Gluten</Link>
@@ -40,15 +39,7 @@ const NavBar = () =>{
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Buscar"
-              className="me-2"
-              aria-label="Search"
-              />
-            <Button variant="outline-dark">Buscar</Button>
-          </Form>
+
         </Navbar.Collapse>
           <CartWidget/>
       </Container>

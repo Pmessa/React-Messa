@@ -7,7 +7,6 @@ import LoaderComponent from '../components/LoaderComponent/LoaderComponent';
 
 const ItemsDetails = () => {
 
-
   const {itemId} = useParams();
 
   const { data, loadin } = useItemCollection("products", itemId)

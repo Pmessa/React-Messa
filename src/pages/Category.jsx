@@ -1,36 +1,25 @@
 import React from 'react';
-import {useEffect, useState} from 'react';
 
+import { useCollection } from '../hooks/useCollection';
 import { useParams } from 'react-router-dom'
-// import { ProductsData } from '../json/ProductsData'
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-
-import { collection, getDocs, getFirestore } from "firebase/firestore"
+import LoaderComponent from '../components/LoaderComponent/LoaderComponent';
 
 const Category = () => {
 
-  const [products, setProducts]= useState([]);
-
-  useEffect(()=>{
-    //Inicializar la base de datos
-    const db = getFirestore();
-
-    //inicializamos la coleccion
-    const productsCollection = collection(db, "products");
-
-    //Obtener los datos de la coleccion
-    getDocs(productsCollection).then((snapshot) =>{
-      setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-    })
-
-  }, [])
-
+  const [productsFiltered, setProductFiltered]= React.useState([]);
   const { categoryId } = useParams();
 
+  const{ data, loading } = useCollection("products")
 
-  const filtrados = products.filter((item)=> item.category === categoryId);
+React.useEffect(() =>{
+  const productsFiltered = data.filter((product)=> {
+    return product.category === categoryId; })
+    setProductFiltered(productsFiltered);
+  },[data, categoryId]);
+
   return (
-       <ItemListContainer  ProductsData={filtrados}/>
+       loading? <LoaderComponent /> : <ItemListContainer  ProductsData={productsFiltered}/>
       );
   };
 
