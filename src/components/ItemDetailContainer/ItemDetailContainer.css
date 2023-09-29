@@ -1,7 +1,12 @@
+.list-group{
+    max-width: 90%;
+}
+
+
 .DetailContainer{
     height: 100vh;
     width: 100vw;
-    background-color: #ffffffe6;
+    background: #dadada;
     display:flex;
     align-items: center;
     text-align: center;
