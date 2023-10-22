@@ -33,7 +33,6 @@ const ItemDetailContainer = ({DetalleProducto}) => {
       <ItemCount />
       { stock > 5 ? <strong>Producto Disponible</strong> : <strong>Ultimas unidades!</strong>}
       <Button className="btn-success" onClick={()=> setStock(stock - 1)}>Agregar al Carrito</Button>
-
     </div>
     )
   }

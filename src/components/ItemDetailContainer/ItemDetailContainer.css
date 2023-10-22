@@ -1,7 +1,10 @@
 .list-group{
     max-width: 90%;
 }
-
+h1{
+    color: red;
+    
+}
 
 .DetailContainer{
     height: 100vh;
