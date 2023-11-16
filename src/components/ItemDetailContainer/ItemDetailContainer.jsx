@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from "react-bootstrap"
-
 import './ItemDetailContainer.css'
 import ItemCount from '../ItemCount/ItemCount';
 

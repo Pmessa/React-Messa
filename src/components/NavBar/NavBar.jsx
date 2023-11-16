@@ -1,7 +1,4 @@
 import CartWidget from '../CartWidget/CartWidget';
-
-
- 
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
