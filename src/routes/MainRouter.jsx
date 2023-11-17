@@ -3,10 +3,8 @@ import Home from "../pages/Home";
 import Category from "../pages/Category"; 
 import ItemsDetails from "../pages/ItemsDetails";
 import NavBar from "../components/NavBar/NavBar";
-import Cart from "../pages/Cart"
-
-
-
+import Cart from "../pages/Cart";
+import Img from "../pages/img";
 
 
 const MainRouter = () => {
@@ -17,6 +15,7 @@ const MainRouter = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/img/:itemId" element={<Img />} />
         <Route path="/category/:categoryId" element={<Category />} />
         <Route path="/item/:itemId" element={<ItemsDetails />} />
         <Route path="/Cart/:itemId" element={<Cart />} />
