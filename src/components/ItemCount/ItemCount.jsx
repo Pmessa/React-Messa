@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartContext'
 
 import "./ItemCount.css"
 
-import { Button } from "react-bootstrap"
+
 
 const ItemCount = () => {
   const [count, setCount] = useState(0);
@@ -29,9 +29,9 @@ const handleRemoveProduct = ()  =>{
 
   return (
     <div>
-      <Button  className="btn-success" onClick={handleRemoveProduct}>-</Button >
+      <button  className="btn-success" onClick={handleRemoveProduct}>-</button >
       <label>{count}</label>
-      <Button className="btn-success" onClick={handleAddProduct}>+</Button >
+      <button className="btn-success" onClick={handleAddProduct}>+</button >
     </div>
   )
 };
