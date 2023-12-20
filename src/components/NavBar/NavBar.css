@@ -1,6 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --clr-gray:rgb(229, 229, 229);
+    --clr-strong-gray:rgb(154, 153, 159);
+    --clr-green:rgb(176, 255, 176);
+    --clr-white:rgb(250,250,250);
+    --clr-black: rgb(28, 28, 28);
+}
+ nav {
+    background:var(--clr-white);
+    border-bottom: 1px solid var(--clr-black);
+ }
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+}
+
 .imgLogo{
     height: 50px;
+    background: transparent;
 }
+
+ul {
+    background:var(--clr-white);
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    
+   
+}
+
+li {
+    background:var(--clr-white);
+    
+}
+
+button:hover {
+    border-bottom: 0px solid var(--clr-black);
+    color: var(--clr-strong-gray);
+}
+
+/* .imgLogo{
+    height: 50px;
+}
+
 .nav-link a{
     text-decoration: none;
     color:rgba(0,0,0,.65);
@@ -23,5 +71,5 @@
 }
 
 .drop:hover{
-    color:black;
-}
+    color:var(--clr-black);
+} */
