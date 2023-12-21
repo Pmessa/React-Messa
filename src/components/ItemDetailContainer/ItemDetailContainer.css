@@ -1,4 +1,148 @@
-.list-group{
+
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+
+:root{
+    --clr-gray:rgb(206, 204, 204);
+    --clr-strong-gray:rgb(154, 153, 159);
+    --clr-green:rgb(176, 255, 176);
+    --clr-white:rgb(250,250,250);
+    --clr-black: rgb(28, 28, 28);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-black);    
+    font-family: 'Handlee', cursive;  
+  
+}
+
+.detailContainerInner {
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1rem;                   
+    }
+
+.detailTitleContainer { 
+    font-size: 1.5rem;
+    padding-top: 80px;
+    display: flex;
+    justify-content:center;
+    font-family: 'Handlee', cursive;  
+}
+h1 {
+    padding-top: .5rem;
+    text-shadow: 0 0 2px var(--clr-strong-gray);    
+}
+    
+.detailContainerInner{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:nowrap;
+    flex-direction: row;
+}
+
+.sellContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 22rem;
+    flex-direction: column;
+    background: var(--clr-white);
+    padding-block: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 2rem -1rem var(--clr-black);
+}    
+
+.desctiptionContainer {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    padding-bottom: 100px;
+    width: 15rem;
+}
+
+.itemCount {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.itemCount button {
+    border: none;
+    background-color: var(--clr-gray);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1rem -.3rem var(--clr-strong-gray);
+}
+
+button:hover {
+    transform: translatey(-3px);
+    transition: 300ms;   
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.5rem;
+   
+}
+
+
+@media screen and (min-width: 570px) {
+    .detailContainerInner {
+        grid-template-columns: 2fr;
+        
+    }
+}
+
+@media screen and (max-width: 571px) {
+    
+    .desctiptionContainer {
+        display: none;
+    }  
+    .sellContainer {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .detailTitleContainer{
+        padding-top: 130px;
+    }
+
+}
+
+
+.detalleInfoProducto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-template-columns:repeat(2);
+    margin-inline: 50px;
+}
+    
+    .priceContainer {
+        font-size: 2rem;
+    }
+  
+
+
+
+
+
+/* .list-group{
     max-width: 90%;
 }
 h1{
@@ -59,4 +203,4 @@ border-radius: 15px;
 }
 p{
     display: inline;
-}
+} */

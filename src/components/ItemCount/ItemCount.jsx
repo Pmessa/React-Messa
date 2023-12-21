@@ -29,9 +29,9 @@ const handleRemoveProduct = ()  =>{
 
   return (
     <div>
-      <button  className="btn-success" onClick={handleRemoveProduct}>-</button >
+      <button  className="btn btn-add" onClick={handleRemoveProduct}>-</button >
       <label>{count}</label>
-      <button className="btn-success" onClick={handleAddProduct}>+</button >
+      <button className="btn btn-remove" onClick={handleAddProduct}>+</button >
     </div>
   )
 };

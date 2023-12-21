@@ -20,14 +20,23 @@
 .productsContainer{
     flex-wrap: wrap;
     padding: 2rem;
+    padding-top: 120px;
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     gap:1rem;                    
-
 }
-@media screen and (min-width: 500px) {
+
+@media screen and (max-width: 699px) {
+    .productsContainer {
+        padding-top: 150px !important;
+    
+    }
+}
+
+
+@media screen and (min-width: 700px) {
     .productsContainer {
         grid-template-columns: 1fr 1fr;
     }
