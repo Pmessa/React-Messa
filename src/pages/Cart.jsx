@@ -10,7 +10,7 @@ const Cart= () => {
 
     loadin ? <LoaderComponent /> : <CartComponent CartProduct={data} />
 
-  );
+  )
 };
 
-export default Cart
+export default Cart;
