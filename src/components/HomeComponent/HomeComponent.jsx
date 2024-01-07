@@ -7,12 +7,15 @@ const HomeComponent = () =>{
     return <div className="homeComponent">
 
         <div className="titleHome">
-            <h1>Evolución</h1>
+        <img src="public/letraV_tr.png" alt="letra" class="letraVtitle"/>
+            <h2>Evolución verde</h2>
         </div>
-        <p>
-            Evolución es un sitio que te ayudará a encontrar el camino hacia el equilibrio integral a travéz de tus habitos, te ayudaremos a que puedas sentirte cada día un poco mejor gracias a los conocimientos que adquirirás solo con inspeccionar nuesto sitio WEB!
-            <strong>Lánzate a la aventura de un  cambio de hábitos que no solo te beneficiará a tí sino que tambien a tu entorno.</strong>
+    <section className="presentationText">
+    <p>
+            En este sitio que te ayudaremos a encontrar el camino hacia el equilibrio integral a travéz de tus habitos, a que puedas sentirte cada día un poco mejor gracias a los conocimientos que adquirirás solo con inspeccionar nuesto sitio WEB!
         </p>
+        <strong>Lánzate a la aventura de un  cambio de hábitos que te beneficiará a tí y a tu entorno.</strong>
+    </section>
 
 {/* <section className="alimentacionPlantBased">
     <h2> Descubrí la alimentación Plant Based</h2>
