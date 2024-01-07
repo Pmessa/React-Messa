@@ -13,9 +13,10 @@ const NavBar = () =>{
       <CartWidget/>
       </div>
       <ul className="buttonList">
+        <li><Link  to="/" className="btn Opciones">Home</Link></li>
+        <li><Link to={"/products"} className='drop btn '>Productos</Link></li>
         <li><Link to={"/category/CGluten"} className='drop btn ConGluten'>Con Gluten</Link></li>
         <li><Link to={"/category/STACC"} className='drop btn SinTACC'>Sin TACC</Link></li>
-        <li><Link  to="/" className="btn Opciones">Nuestras Opciones</Link></li>
       </ul>
     </nav>
 
